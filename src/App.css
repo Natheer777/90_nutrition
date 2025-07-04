@@ -1,0 +1,43 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Tajawal:wght@200;300;400;500;700;800;900&display=swap");
+:root {
+  --color-white: #ffffff;
+  --color-blue: #37bcee;
+  --color-blue2:#1160AA
+}
+#root {
+  font-family: "Tajawal", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+body{
+    background-color: black;
+}
+
+ .left {
+  opacity: 0;
+  filter: blur(4px);
+  transform: translateX(-2%);
+  transition: all 1.5s;
+}
+.right {
+  opacity: 0;
+  filter: blur(4px);
+  transform: translateX(2%);
+  transition: all 1.5s;
+}
+.hidden {
+  opacity: 0;
+  filter: blur(4px);
+  transition: all 1.5s;
+}
+.top {
+  opacity: 0;
+  filter: blur(4px);
+  transform: translateY(30%);
+  transition: all 1.5s;
+}
+.show {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateX(0);
+} 
