@@ -4,3 +4,8 @@ export { default as Footer } from "./Footer/Footer";
 export { default as Details_Product } from "./Details_Product/Details_Product";
 export { default as Header_Product } from "./Header_Product/Header_Product";
 export { default as Verfiy_product } from "./Verfiy_product/Verfiy_product";
+export { default as AboutUs } from "./AboutUs/AboutUs";
+export { default as Comments } from "./Comments/Comments";
+export { default as WhyChoos } from "./WhyChoos/WhyChoos";
+export { default as ContactUs } from "./ContactUs/ContactUs";
+export { default as ProductHome } from "./ProductHome/ProductHome";

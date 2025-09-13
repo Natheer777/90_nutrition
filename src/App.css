@@ -9,6 +9,13 @@
   font-weight: 500;
   font-style: normal;
 }
+@font-face {
+  font-family: 'Bebas Neue';
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+  src: url('./Fonts/BebasNeue-Regular.ttf') format('woff2');
+}
 body{
     background-color: black;
 }

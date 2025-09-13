@@ -1,0 +1,307 @@
+/* About Us Section Styles */
+.about .about-us-section {
+    padding: 6rem 0;
+    color: var(--color-white);
+}
+
+.about .about-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* Section Header */
+.about .section-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.about .section-title {
+    font-size: 2.5rem !important;
+    font-weight: 700 !important;
+    color: var(--color-white) !important;
+    line-height: 1.2;
+    font-family: 'Bebas Neue';
+    letter-spacing: 1px;
+}
+
+.about .section-divider {
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, var(--color-blue), var(--color-blue2));
+    margin: 0 auto;
+    border-radius: 2px;
+}
+
+/* About Content */
+.about .about-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4rem;
+    align-items: center;
+    margin-bottom: 4rem;
+}
+
+.about .about-text {
+    flex: 1;
+    min-width: 300px;
+}
+
+.about .lead-text {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--color-blue);
+    margin-bottom: 1.5rem;
+    line-height: 1.5;
+    font-family: 'Bebas Neue';
+    letter-spacing: 0.5px;
+}
+
+.about .description {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #e5e7eb;
+    margin-bottom: 2rem;
+    font-weight: 300;
+}
+
+/* Stats */
+.about .stats-container {
+    display: flex;
+    gap: 2rem;
+    margin-top: 2.5rem;
+    flex-wrap: wrap;
+}
+
+.about .stat-item {
+    text-align: center;
+    flex: 1;
+    min-width: 100px;
+    padding: 1.5rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+}
+
+.about .stat-item:hover {
+    transform: translateY(-5px);
+    background: rgba(55, 188, 238, 0.1);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(55, 188, 238, 0.2);
+}
+
+.about .stat-number {
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--color-blue);
+    margin-bottom: 0.5rem;
+    font-family: 'Bebas Neue';
+    letter-spacing: 1px;
+}
+
+.about .stat-label {
+    font-size: 0.9rem;
+    color: #a1a1aa;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* About Image */
+.about .about-image {
+    flex: 1;
+    min-width: 300px;
+    position: relative;
+}
+
+.about .image-placeholder {
+    position: relative;
+    padding-top: 100%;
+    background: linear-gradient(135deg, var(--color-blue), var(--color-blue2));
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.about .placeholder-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-white);
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Mission Section */
+.about .mission-section {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 3rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 16px;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+}
+
+.about .mission-section h3 {
+    font-size: 2rem;
+    color: var(--color-white);
+    margin-bottom: 1.5rem;
+    font-family: 'Bebas Neue';
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.about .mission-section p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #e5e7eb;
+    font-weight: 300;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .about .about-content {
+        flex-direction: column;
+    }
+
+    .about .about-text,
+    .about .about-image {
+        width: 100%;
+    }
+
+    .about .stats-container {
+        justify-content: center;
+    }
+
+    .about .stat-item {
+        min-width: 120px;
+    }
+
+    .about .section-title {
+        font-size: 2rem;
+    }
+
+    .about .lead-text {
+        font-size: 1.3rem;
+    }
+}
+
+/* Animation */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.about .about-content,
+.about .mission-section {
+    animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.about .mission-section {
+    animation-delay: 0.2s;
+}
+
+
+.about .about-text,
+.about .about-image {
+    width: 100%;
+}
+
+.about .stats-container {
+    justify-content: center;
+}
+
+.about .stat-item {
+    min-width: 120px;
+}
+
+.about .section-title {
+    font-size: 2rem;
+}
+
+.about .lead-text {
+    font-size: 1.3rem;
+}
+
+
+/* Animation */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.about .about-content,
+.about .mission-section {
+    animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.about .mission-section {
+    animation-delay: 0.2s;
+}
+
+.about .marquee-container {
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    background: transparent;
+    color: #000;
+    font-weight: bold;
+    margin: 2rem 0;
+}
+
+.about .marquee-text {
+    font-family: 'Bebas Neue';
+    color: var(--color-blue);
+    display: inline-block;
+    font-size: 20px;
+    padding-left: 100%;
+    animation: marquee 25s linear infinite;
+}
+
+.about .marquee-text ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+  }
+  
+  @keyframes marquee {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }

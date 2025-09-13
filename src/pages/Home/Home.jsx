@@ -1,4 +1,4 @@
-import { Navbar , Header , Footer} from "../../sections";
+import { Navbar , Header , Footer, AboutUs , ContactUs, Comments, WhyChoos, Verfiy_product, ProductHome} from "../../sections";
 import  {BackgroundVideo}  from "../../../components/index";
 export default function Home() {
   return (
@@ -6,6 +6,12 @@ export default function Home() {
     <Navbar />
     <BackgroundVideo />
     <Header />
+    <AboutUs />
+    <ProductHome />
+    <WhyChoos />
+    <Comments />
+    <ContactUs />
+    <Verfiy_product />
     <Footer />
     </>
   )

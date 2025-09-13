@@ -1,7 +1,7 @@
 import "./Verfiy_product.css";
 import { FiInstagram } from "react-icons/fi";
 import { FiFacebook } from "react-icons/fi";
-
+import ShinyText from '../../../components/ShinyText/ShinyText';    
 import scan from '../../assets/scan-qr-C9SOJXD7.webp'
 import Logo from '../../assets/LOGO.svg'
 export default function Verfiy_product() {
@@ -15,8 +15,14 @@ export default function Verfiy_product() {
             </div>
             <div className="col-xl-4 col-lg-4 top">
               <ul>
-                <h2>Verify Your Product</h2>
-                <li>1. Scratch the QR code on the back of the package. </li>
+              <h1>
+            <ShinyText 
+            text="Verify Your Product"
+            speed={3}
+            className='shiny-heading'
+            />
+
+            </h1>                <li>1. Scratch the QR code on the back of the package. </li>
                 <li>2. Use your smartphone camera to scan the QR code. </li>
                 <li> 3. Follow the link that the QR code refers to. </li>
                 <li>

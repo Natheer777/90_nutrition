@@ -1,0 +1,171 @@
+.borderOur h5 {
+    font-family: 'NunitoBlack';
+    color: var(--color-blue2);
+    padding: 10px 15px;
+    font-weight: bold;
+    font-size: 15px;
+    margin: 0;
+    background: linear-gradient(135deg, #cce0f4 25%, #1e9cd7 50%, #005aa0 75%, #003e93 100%);
+    /* border-radius: 8px 8px 0 0; */
+}
+
+.OUR_INJECTABLES .swiper-button-prev {
+    display: block;
+    width: 0;
+}
+
+.OUR_INJECTABLES .swiper-button-next {
+    display: block;
+    width: 13px;
+}
+.OUR_INJECTABLES .swiper-button-next::after{
+    font-size: 2rem !important;
+}
+
+.OUR_INJECTABLES .swiper-button-prev::after{
+    font-size: 2rem !important;
+}
+.OUR_INJECTABLES .swiper-button-next:hover{
+    background-color: transparent !important;
+}
+
+.ProductsInjec {
+    padding: 20px;
+    /* background-color: #f8f9fa; */
+}
+
+.All_Product {
+    display: grid;
+    /* grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); */
+    gap: 25px;
+    padding: 20px 0;
+}
+
+.All_Product_items {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.All_Product_items:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.product-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    transition: all 0.3s ease;
+}
+
+.product-card img {
+    width: 100%;
+    /* height: 200px; */
+    object-fit: cover;
+    /* border-bottom: 1px solid #eee; */
+    scale: 1.1;
+}
+
+.product-card h2 {
+    font-family: 'NunitoBlack';
+    color: #2c3e50;
+    font-size: 1.2rem;
+    margin: 15px 0 10px;
+    padding: 0 15px;
+    font-weight: 600;
+}
+
+.product-card p {
+    font-family: 'NunitoBlack';
+    color: #7f8c8d;
+    padding: 0 15px;
+    margin: 5px 0 15px;
+    font-size: 0.95rem;
+}
+
+.Link_Product {
+    font-family: 'NunitoBlack';
+    display: inline-block;
+    padding: 10px 25px;
+    color:#107cbd !important;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    text-align: center;
+    margin-top: auto;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.1); /* شفاف */
+    backdrop-filter: blur(10px);          /* بلور للخلفية */
+    -webkit-backdrop-filter: blur(10px);  /* دعم Safari */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.Link_Product::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(0, 91, 160, 0.2) 0%, rgba(30, 156, 215, 0.3) 50%, rgba(0, 58, 147, 0.3) 100%);
+    z-index: -1;
+    transition: all 0.3s ease;
+    opacity: 1;
+    filter: blur(5px);
+}
+
+.Link_Product:hover::before {
+    opacity: 0.9;
+    transform: scale(1.05);
+}
+
+.Link_Product:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 90, 160, 0.3);
+}
+
+.OUR_INJECTABLES ul {
+    padding-left: 0;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+.OUR_INJECTABLES ul li:nth-child(1) {
+    font-family: 'NunitoBlack';
+    position: relative;
+    top: -1px;
+    padding-left: 10px;
+    width: 70%;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-bottom-right-radius: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    background: linear-gradient(158deg, #cce0f4 25%, #1e9cd7 50%, #005aa0 75%, #003e93 100%)
+}
+
+.OUR_INJECTABLES ul li:nth-child(2) {
+    font-family: 'NunitoBlack';
+    padding-right: 10px;
+    color: var(--color-blue2);
+    font-size: 15px;
+    font-weight: bold;
+    padding-top: 5px;
+}
+
+/* .OUR_INJECTABLES ,.ProductsInjec .swiper-pagination .swiper-pagination-clickable .swiper-pagination-bullets .swiper-pagination-horizontalswiper-pagination .swiper-pagination-clickable .swiper-pagination-bullets .swiper-pagination-horizontal{
+    display: block;
+    position: relative;
+    bottom: 20px;
+ 
+}
+.OUR_INJECTABLES .swiper-pagination-bullet {
+width: 10px !important;
+height: 10px !important;
+} */
