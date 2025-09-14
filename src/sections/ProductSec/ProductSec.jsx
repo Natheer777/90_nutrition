@@ -34,9 +34,9 @@ export default function ProductSec() {
 
 
     return (
-        <section className="ProductSec products-section">
+        <section className="ProductSec products-section container">
             <div className="container">
-                <h1 className="section-title">
+                <h1 className="section-title mt-5">
                     <ShinyText
                         text="Our Products"
                         speed={3}
@@ -60,9 +60,9 @@ export default function ProductSec() {
                                 <div className="product-info">
                                     <h3 className="product-name">{(product.pname || 'Product Name').replace(/-/g, ' ')}</h3>
 
-                                    <div className="product-price">
+                                    {/* <div className="product-price">
                                         {product.price ? `$${parseFloat(product.price).toFixed(2)}` : 'Price not available'}
-                                    </div>
+                                    </div> */}
                                     <a href={product.const_QrCode} target="_blank" rel="noreferrer" className="view-details-btn">View Details</a>
                                 </div>
                             </div>

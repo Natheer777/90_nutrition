@@ -1,5 +1,5 @@
 .footer {
-  background: -webkit-linear-gradient(bottom, #1160aa, #000013);
+  background: -webkit-linear-gradient(bottom, #000013, var(--color-blue2), #000013);
   padding-bottom: 20px;
   width: 100%;
   /* position: absolute;

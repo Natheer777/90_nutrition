@@ -47,19 +47,19 @@ export default function Comments() {
           {[
             {
               id: 1,
-              img: "https://randomuser.me/api/portraits/men/12.jpg",
+              img: "https://randomuser.me/api/portraits/men/10.jpg",
               comment: "90-Nutrition's protein supplements have completely transformed my fitness journey. The quality is unmatched and I've seen incredible results in my muscle",
               name: "James Wilson",
             },
             {
               id: 2,
-              img: "https://randomuser.me/api/portraits/women/44.jpg",
+              img: "https://randomuser.me/api/portraits/women/43.jpg",
               comment: "As a professional athlete, I trust 90-Nutrition for clean, effective supplements. Their pre-workout formula gives me the perfect energy boost without any crashes.",
               name: "Emma Thompson",
             },
             {
               id: 3,
-              img: "https://randomuser.me/api/portraits/men/33.jpg",
+              img: "https://randomuser.me/api/portraits/men/30.jpg",
               comment: "The weight gainer from 90-Nutrition helped me achieve my bulking goals with clean, quality nutrition. The best UK supplement brand I've tried!",
               name: "David Miller",
             }

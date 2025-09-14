@@ -1,11 +1,11 @@
-import { Navbar , Header , Footer, AboutUs , ContactUs, Comments, WhyChoos, Verfiy_product, ProductHome, NewArrivals} from "../../sections";
+import { Navbar , Header , Footer, AboutUs , ContactUs, Comments, WhyChoos, Verfiy_product, ProductHome, NewArrivals, FooterB} from "../../sections";
 import  {BackgroundVideo}  from "../../../components/index";
 export default function Home() {
   return (
     <>
     <Navbar />
     <BackgroundVideo />
-    <Header />
+    {/* <Header /> */}
     <AboutUs />
     <ProductHome />
     <NewArrivals />
@@ -13,7 +13,8 @@ export default function Home() {
     <Comments />
     <ContactUs />
     <Verfiy_product />
-    <Footer />
+    <FooterB />
+    {/* <Footer /> */}
     </>
   )
 }

@@ -56,6 +56,8 @@
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     border: 1px solid #444;
+    width: 90%;
+    margin: auto;
 }
 
 .arrive .video-card:hover {
@@ -92,7 +94,7 @@
     font-family: 'Bebas Neue', sans-serif;
     font-size: 1.5rem;
     color: #fff;
-    background: #2d2d2d;
+    background: #00293c;
     border-top: 1px solid #444;
 }
 

@@ -46,7 +46,7 @@ export default function AboutUs() {
     return (
         <section className="about about-us-section">
             <div className="about-container">
-                <div className="section-header">
+                <div className="section-header mb-0">
                     <h2 className="section-title">
                         <SplitText
                             text="About Us"
@@ -61,7 +61,6 @@ export default function AboutUs() {
                             rootMargin="-50px"
                         />
                     </h2>
-                    <div className="section-divider"></div>
                 </div>
                 
                 <div className="about-content">

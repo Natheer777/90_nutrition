@@ -16,7 +16,7 @@ export default function NewArrivals() {
     return (
         <section className="arrive new-arrivals-section">
             <div className="section-header">
-                <div className="catgeo mb-5">
+                <div className="section-title mb-5">
 
                     <h1>
                         <ShinyText
@@ -30,7 +30,7 @@ export default function NewArrivals() {
 
             <div className="videos-container">
                 {videos.map((video, index) => (
-                    <div key={index} className="video-card">
+                    <div key={index} className="video-card hidden">
                         <div className="video-wrapper">
                             <video
                                 src={video.url}

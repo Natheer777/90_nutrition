@@ -1,11 +1,6 @@
 import './ProductHome.css'
 import { useState, useEffect } from 'react';
 import axios from 'axios';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/css';
-import 'swiper/css/pagination';
-import 'swiper/css/navigation';
-import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 import ShinyText from '../../../components/ShinyText/ShinyText';
 
 export default function ProductHome() {
@@ -52,102 +47,37 @@ export default function ProductHome() {
         </div>
         <div className="ProductsInjec container">
           <div className="All_Product">
-            <Swiper
-              spaceBetween={20}
-              slidesPerView={1}
-              centeredSlides={false}
-              speed={800}
-              loop={true}
-              grabCursor={true}
-              pagination={{
-                clickable: true,
-                dynamicBullets: true,
-              }}
-              navigation={true}
-              autoplay={{
-                delay: 3000,
-                disableOnInteraction: false,
-                waitForTransition: true,
-              }}
-              modules={[Autoplay, Pagination, Navigation]}
-              onSwiper={(swiper) => {
-                // Preload images for smoother transitions
-                swiper.on('beforeTransitionStart', () => {
-                  swiper.slides.eq(swiper.activeIndex).find('img').each(function() {
-                    if (this.complete) return;
-                    const img = new Image();
-                    img.src = this.src;
-                  });
-                });
-              }}
-              breakpoints={{
-                480: {
-                  slidesPerView: 1,
-                  spaceBetween: 15,
-                },
-                640: {
-                  slidesPerView: 2,
-                  spaceBetween: 20,
-                },
-                1024: {
-                  slidesPerView: 3,
-                  spaceBetween: 25,
-                },
-                1200: {
-                  slidesPerView: 3,
-                  spaceBetween: 30,
-                }
-              }}
-              className="products-swiper"
-              watchSlidesProgress={true}
-              watchOverflow={true}
-            >
-              {data && data.length > 0 ? data.map((item) => (
-                <SwiperSlide key={item.p_id}>
-                  <div className="All_Product_items">
-                    <div className="product-card p-4 shadow-sm">
-                      <Swiper
-                        spaceBetween={10}
-                        slidesPerView={1}
-                        autoplay={{
-                          delay: 2500,
-                          disableOnInteraction: false,
-                        }}
-                        modules={[Autoplay]}
-                        className="product-images-swiper"
-                      >
-                        {(Array.isArray(item.images) ? item.images : []).map((img, idx) => (
-                          img && (
-                            <SwiperSlide key={`${item.p_id}-img-${idx}`}>
-                              <div className="product-image-container">
-                                <img
-                                  loading="lazy"
-                                  src={img}
-                                  alt={`${item.pname} ${idx + 1}`}
-                                  className="product-image"
-                                />
-                              </div>
-                            </SwiperSlide>
-                          )
-                        ))}
-                      </Swiper>
-                      <h2 className="mt-3 text-center mb-0">{item.pname || 'Product Name'}</h2>
-                      <div className="product-details">
-                        <p className='text-center'><strong>Price:</strong> {item.price ? `$${item.price}` : 'Price not available'}</p>                      
-                      </div>
-                      <a
-                        className="Link_Product"
-                        href={item.const_QrCode || '#'}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        View Details
+            <div className="products-swiper">
+              <div className="swiper-wrapper">
+                {data.map((product, index) => (
+                  <div className="swiper-slide" key={index}>
+                    <div className="product-card">
+                      <a href={`/product/${product.p_id || product.id}`} className="product-link">
+                        <div className="product-image-container">
+                          <img
+                            src={product.images && product.images[0] 
+                              ? product.images[0] 
+                              : `https://90nutrition-uk.com/admin/${product.image || ''}`}
+                            alt={product.pname || product.name || 'Product'}
+                            className="product-image"
+                            loading="lazy"
+                          />
+                        </div>
+                        <div className="product-info">
+                          <h3 className="product-name text-center">{product.pname || product.name}</h3>
+                          {/* {product.price && (
+                            <div className="product-price">
+                              {product.price} {product.currency || 'SAR'}
+                            </div>
+                          )} */}
+                          <a href={product.const_QrCode} target="_blank" rel="noreferrer" className="view-details-btn">View Details</a>
+                        </div>
                       </a>
                     </div>
                   </div>
-                </SwiperSlide>
-              )) : null}
-            </Swiper>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
       </div>

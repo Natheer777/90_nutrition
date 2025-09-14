@@ -11,3 +11,4 @@ export { default as ContactUs } from "./ContactUs/ContactUs";
 export { default as ProductHome } from "./ProductHome/ProductHome";
 export { default as ProductSec } from "./ProductSec/ProductSec";
 export { default as NewArrivals } from "./NewArrivals/NewArrivals";
+export { default as FooterB } from "./FooterB/Footer";

@@ -1,5 +1,5 @@
 import React from 'react'
-import { ContactUs, Footer, Navbar, Verfiy_product } from '../../sections'
+import { ContactUs, FooterB, Navbar, Verfiy_product } from '../../sections'
 
 export default function Contact() {
   return (
@@ -7,7 +7,7 @@ export default function Contact() {
     <Navbar />
     <ContactUs />
     <Verfiy_product />
-    <Footer />
+    <FooterB />
     </>
   )
 }
