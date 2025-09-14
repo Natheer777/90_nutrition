@@ -3,17 +3,15 @@ import { useState, useEffect } from "react";
 import "./Details_Product.css";
 import axios from "axios";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { GiPineapple, GiFruitBowl, GiBanana } from "react-icons/gi";
-import { FaCookie, FaWineBottle, FaAppleAlt, FaWater } from "react-icons/fa";
-import { GiWatermelon } from "react-icons/gi";
-import Mango from "../../assets/ChatGPT Image 22 يونيو 2025، 05_44_20 ص.png";
-import  flaivorOne from  '../../assets/flaivor/cookis=bnana.png'
-import  flaivortow from  '../../assets/flaivor/mango+waterm.png'
-import  flaivorthee from  '../../assets/flaivor/mix frute.png'
-import  flaivorfour from  '../../assets/flaivor/pinapple.png'
-import  flaivorfive from  '../../assets/flaivor/shani.png'
-import  flaivorsix from  '../../assets/flaivor/watermelon.png'
-
+import flaivorOne from '../../assets/flaivor/cookis=bnana.png'
+import flaivortow from '../../assets/flaivor/mango+waterm.png'
+import flaivorthee from '../../assets/flaivor/mix frute.png'
+import flaivorfour from '../../assets/flaivor/pinapple.png'
+import flaivorfive from '../../assets/flaivor/shani.png'
+import flaivorsix from '../../assets/flaivor/watermelon.png'
+import preImg1 from '../../assets/PrePlus/Asset 6@8x.png'
+import preImg2 from '../../assets/PrePlus/Asset 7@8x.png'
+import preImg3 from '../../assets/PrePlus/Asset 8@8x.png'
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
@@ -73,64 +71,63 @@ export default function Details_product() {
     images,
   } = productData;
 
-  // تقسيم الوصف إلى أسطر
-  const descriptionLines = description
-    ?.split("\r\n")
-    .filter((line) => line.trim() !== "");
-  const shortDescription = descriptionLines.slice(0, 1);
-  const fullDescription = descriptionLines;
+  // Handle description display
+  const descriptionText = description || '';
+  const shortDescription = descriptionText.length > 100 
+    ? `${descriptionText.substring(0, 100)}...` 
+    : descriptionText;
+  const fullDescription = descriptionText;
 
-const getFlavorIconAndClass = (flavor) => {
-  const name = flavor.toLowerCase();
+  const getFlavorIconAndClass = (flavor) => {
+    const name = flavor.toLowerCase();
 
-  if (name.includes("cookies") || name.includes("banana")) {
+    if (name.includes("cookies") || name.includes("banana")) {
+      return {
+        icon: <img src={flaivorOne} alt="Cookies & Banana" className="flavor-image" />,
+        className: "flavor-cookies-banana",
+      };
+    }
+
+    if (name.includes("mango") && name.includes("watermelon")) {
+      return {
+        icon: <img src={flaivortow} alt="Mango & Watermelon" className="flavor-image" />,
+        className: "flavor-mango-watermelon",
+      };
+    }
+
+    if (name.includes("mix fruit")) {
+      return {
+        icon: <img src={flaivorthee} alt="Mix Fruit" className="flavor-image" />,
+        className: "flavor-mix-fruit",
+      };
+    }
+
+    if (name.includes("pineapple")) {
+      return {
+        icon: <img src={flaivorfour} alt="Pineapple" className="flavor-image" />,
+        className: "flavor-pineapple",
+      };
+    }
+
+    if (name.includes("shani")) {
+      return {
+        icon: <img src={flaivorfive} alt="Shani" className="flavor-image" />,
+        className: "flavor-shani",
+      };
+    }
+
+    if (name.includes("watermelon")) {
+      return {
+        icon: <img src={flaivorsix} alt="Watermelon" className="flavor-image" />,
+        className: "flavor-watermelon",
+      };
+    }
+
     return {
-      icon: <img src={flaivorOne} alt="Cookies & Banana" className="flavor-image" />,
-      className: "flavor-cookies-banana",
+      icon: null,
+      className: "",
     };
-  }
-
-  if (name.includes("mango") && name.includes("watermelon")) {
-    return {
-      icon: <img src={flaivortow} alt="Mango & Watermelon" className="flavor-image" />,
-      className: "flavor-mango-watermelon",
-    };
-  }
-
-  if (name.includes("mix fruit")) {
-    return {
-      icon: <img src={flaivorthee} alt="Mix Fruit" className="flavor-image" />,
-      className: "flavor-mix-fruit",
-    };
-  }
-
-  if (name.includes("pineapple")) {
-    return {
-      icon: <img src={flaivorfour} alt="Pineapple" className="flavor-image" />,
-      className: "flavor-pineapple",
-    };
-  }
-
-  if (name.includes("shani")) {
-    return {
-      icon: <img src={flaivorfive} alt="Shani" className="flavor-image" />,
-      className: "flavor-shani",
-    };
-  }
-
-  if (name.includes("watermelon")) {
-    return {
-      icon: <img src={flaivorsix} alt="Watermelon" className="flavor-image" />,
-      className: "flavor-watermelon",
-    };
-  }
-
-  return {
-    icon: null,
-    className: "",
   };
-};
-
 
   const productImages = Array.isArray(images)
     ? images.filter((url) => url && url.trim() !== "")
@@ -138,24 +135,28 @@ const getFlavorIconAndClass = (flavor) => {
 
   const digitEntries = Object.entries(productData.digit || {});
 
+  function roundNumber(value) {
+    const num = Number(value);
+    if (isNaN(num)) return value;
+    return Math.round(num);
+  }
 
-function roundNumber(value) {
-  const num = Number(value);
-  if (isNaN(num)) return value;
-  return Math.round(num);
-}
+  const units = {
+    carbs: "g",     // جرام
+    calories: "kcal",
+    fat: "g",
+    eaa: "g",
+    neaa: "g",
+    sugars: "g",
+    protein: "g",
+    eaas:"g"
+  };
 
+  // صور منتج PRE-PLUS
+  const prePlusImages = [preImg1, preImg2, preImg3];
 
-const units = {
-  carbs: "g",     // جرام
-  calories: "kcal",
-  fat: "g",
-  eaa: "g",
-  neaa: "g",
-  sugars: "g",
-  protein: "g",
-};
-
+  // التحقق من اسم المنتج
+  const isPrePlusProduct = pname?.toUpperCase() === "PRE-PLUS";
 
   return (
     <>
@@ -165,7 +166,7 @@ const units = {
           backgroundImage: `url(${productData.bg_img})`,
         }}
       ></div>
-      <div className="swiper_product mb-5 container">
+      <div className="details swiper_product mb-5 container">
         <div className="Swiper_Conent">
           <div className="container">
             <div className="row">
@@ -214,7 +215,7 @@ const units = {
                       {showFullDescription ? fullDescription : shortDescription}
                     </div>
 
-                    {descriptionLines.length > 6 && (
+                    {fullDescription.length > 100 && (
                       <button
                         onClick={() => setShowFullDescription((prev) => !prev)}
                         className="btn btn-link p-0 mt-2"
@@ -222,6 +223,7 @@ const units = {
                           fontSize: "18px",
                           color: "#FFFFFF",
                           cursor: "pointer",
+                          display: "block"
                         }}
                       >
                         {showFullDescription ? "Show Less" : "Show More"}
@@ -245,7 +247,7 @@ const units = {
                         <strong>{num_of_serving}</strong>
                       </li>
                       <li className="left">
-                        <strong>{num_of_scope} scoop</strong>
+                        <strong>{num_of_scope}</strong>
                       </li>
                     </ul>
                   </div>
@@ -281,16 +283,41 @@ const units = {
         <div className="container">
           <div className="row">
             <div className="col-xl-6 col-l-6 d-flex align-items-center">
-          <ul>
-  {digitEntries.map(([key, value], index) => (
-    <li key={key}>
-      <p className={`left proprties_product_${index + 1}`}>
-        {key} : <strong>{roundNumber(value)}{units[key.toLowerCase()] || ""}</strong>
-      </p>
-    </li>
-  ))}
-</ul>
-
+              <ul>
+                {isPrePlusProduct ? (
+                  // عرض صور PRE-PLUS
+                  prePlusImages.map((img, index) => (
+                    <li key={index}>
+                      <p className={`left proprties_product_${index + 1}`}>
+                        <img 
+                          src={img} 
+                          alt={`PRE-PLUS Feature ${index + 1}`}
+                          style={{
+                            maxWidth: "60%",
+                            height: "auto",
+                            borderRadius: "8px",
+                            boxShadow: "0 2px 4px rgba(0,0,0,0.1)",
+                          }}
+                        />
+                      </p>
+                    </li>
+                  ))
+                ) : (
+                  // عرض القيم الرقمية للمنتجات الأخرى
+                  digitEntries.map(([key, value], index) => (
+                    <li key={key}>
+                      <p className={`left proprties_product_${index + 1}`}>
+                        {key} : <strong>{roundNumber(value)}{units[key.toLowerCase()] || ""}</strong>
+                        {pname === "CREA-PURE" && productData.notes && (
+                          <span className="notes">
+                            {productData.notes}
+                          </span>
+                        )}
+                      </p>
+                    </li>
+                  ))
+                )}
+              </ul>
             </div>
             <div className="col-xl-6 col-l-6 d-flex justify-content-center align-items-center">
               {productData.vid_url ? (

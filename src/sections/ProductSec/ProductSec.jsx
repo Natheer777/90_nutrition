@@ -58,7 +58,7 @@ export default function ProductSec() {
                                     )}
                                 </div>
                                 <div className="product-info">
-                                    <h3 className="product-name">{product.pname || 'Product Name'}</h3>
+                                    <h3 className="product-name">{(product.pname || 'Product Name').replace(/-/g, ' ')}</h3>
 
                                     <div className="product-price">
                                         {product.price ? `$${parseFloat(product.price).toFixed(2)}` : 'Price not available'}

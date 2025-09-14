@@ -18,7 +18,6 @@ export default function Products() {
     <Details_Product />
     <DigitRain />
     <BackgroundVideo />
-    <ProductSec />
     <Verfiy_product />
     <Footer />
     </>

@@ -1,22 +1,26 @@
-.swiper_product {
+.details .notes{
+  margin-top: 10px;
+  font-size: 13px;
+}
+.details .swiper_product {
   margin-top: 20px;
 }
-.swiper_product h1 {
+.details .swiper_product h1 {
   color: var(--color-white);
   text-align: center;
   margin-bottom: 30px;
 }
-.Swiper {
+.details .Swiper {
   display: flex;
   align-items: center;
 }
-.swiper {
+.details .swiper {
   width: 90%;
   height: 60vh;
   margin: 20px;
 }
 
-.swiper-slide {
+.details .swiper-slide {
   text-align: center;
   line-height: 28;
   font-size: 18px;
@@ -28,17 +32,17 @@
   align-items: center;
 }
 
-.swiper-slide img {
+.details .swiper-slide img {
   display: block;
   width: 100%;
   object-fit: cover;
   height: 55vh;
 }
-.swiper-button-prev,
-.swiper-button-next {
+.details .swiper-button-prev,
+.details .swiper-button-next {
   color: var(--color-blue) !important;
 }
-.details_product {
+.details .details_product {
   color: var(--color-white);
   padding: 10px;
   border-radius: 10px;
@@ -46,7 +50,7 @@
 }
 .details_product p {
   font-size: 18px;
-  text-align: center;
+  text-align: start;
 }
 .product-properties ul {
   display: flex;
@@ -252,11 +256,52 @@
   font-weight: bold;
   font-size: 20px;
 }
+
+/* Product Images Styles */
+.pre-plus-image,
+.product-image {
+  display: inline-block !important;
+  visibility: visible !important;
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+  margin-left: 10px;
+}
+
+/* Ensure list items can contain the images */
+.proprties_product ul li p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 10px;
+  margin: 0;
+  height: auto !important;
+  line-height: normal !important;
+  text-align: center;
+}
+
+/* For PRE-PLUS product, make the property name smaller */
+.proprties_product ul li p .property-name {
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+/* Image container */
+.property-image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 40px;
+  width: 100%;
+}
+
 .how_use {
   color: var(--color-blue);
   font-size: 20px;
   font-weight: bold;
 }
+
 .flavor-item {
   /* width: min-content; */
   display: flex;
