@@ -5,13 +5,18 @@ import { FaStar, FaQuoteLeft } from "react-icons/fa";
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import { Autoplay, Pagination, Navigation } from 'swiper/modules';
-
+import ShinyText from '../../../components/ShinyText/ShinyText';
 export default function Comments() {
   return (
-    <div className="comment-section container">
+    <div className="comment-section container mt-4">
       <div className="text-center">
-        <h3 className="comment-title">What Our Customer Says</h3>
-        <h1 className="section-heading">Our Testimonials</h1>
+        <h1 className="section-heading">
+        <ShinyText 
+            text="Our Testimonials"
+            speed={3}
+            className='shiny-heading'
+            />
+        </h1>
       </div>
 
       <div className="card-container">
@@ -43,20 +48,20 @@ export default function Comments() {
             {
               id: 1,
               img: "https://randomuser.me/api/portraits/men/12.jpg",
-              comment: "TRX-LABORATORY injections gave me a real boost in strength and recovery. Felt the difference within weeks!",
-              name: "James Carter",
+              comment: "90-Nutrition's protein supplements have completely transformed my fitness journey. The quality is unmatched and I've seen incredible results in my muscle",
+              name: "James Wilson",
             },
             {
               id: 2,
-              img: "https://randomuser.me/api/portraits/men/22.jpg",
-              comment: "I’ve used different oral cycles before, but TRX-LABORATORY tablets are by far the most effective with clean results.",
-              name: "William Thompson",
+              img: "https://randomuser.me/api/portraits/women/44.jpg",
+              comment: "As a professional athlete, I trust 90-Nutrition for clean, effective supplements. Their pre-workout formula gives me the perfect energy boost without any crashes.",
+              name: "Emma Thompson",
             },
             {
               id: 3,
               img: "https://randomuser.me/api/portraits/men/33.jpg",
-              comment: "hormone from TRX-LABORATORY worked perfectly for my bulking phase. Great quality and noticeable gains!",
-              name: "Daniel Roberts",
+              comment: "The weight gainer from 90-Nutrition helped me achieve my bulking goals with clean, quality nutrition. The best UK supplement brand I've tried!",
+              name: "David Miller",
             }
             
           ].map((testimonial) => (

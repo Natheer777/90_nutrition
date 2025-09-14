@@ -3,7 +3,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle";
 import "./App.css";
 import { useEffect } from "react";
-import { Home, Products } from "./pages/index";
+import { Contact, Home, Products } from "./pages/index";
 
 function App() {
     useEffect(() => {
@@ -32,6 +32,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/:productName" element={<Products />}/>
+          <Route path="/Contact" element={<Contact />}/>
         </Routes>
       </Router>
     </>

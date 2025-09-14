@@ -3,7 +3,7 @@ import './WhyChoos.css';
 import ShinyText from '../../../components/ShinyText/ShinyText';    
 export default function WhyChoos() {
   return (
-    <section className="why-choose">
+    <section className="why why-choose">
       <div className="why-choose__container">
         <div className="section-header">
           <h2 className="section-title">

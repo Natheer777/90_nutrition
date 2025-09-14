@@ -9,3 +9,4 @@ export { default as Comments } from "./Comments/Comments";
 export { default as WhyChoos } from "./WhyChoos/WhyChoos";
 export { default as ContactUs } from "./ContactUs/ContactUs";
 export { default as ProductHome } from "./ProductHome/ProductHome";
+export { default as ProductSec } from "./ProductSec/ProductSec";

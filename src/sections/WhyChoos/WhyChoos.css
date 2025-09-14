@@ -1,22 +1,22 @@
 /* Why Choose Section */
-.why-choose {
+.why .why-choose {
     padding: 6rem 0;
     background-color: #000;
     color: #fff;
 }
 
-.why-choose__container {
+.why .why-choose__container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 2rem;
 }
 
-.section-header {
+.why .section-header {
     text-align: center;
     margin-bottom: 4rem;
 }
 
-.section-title {
+.why .section-title {
     font-size: 2.5rem;
     font-weight: 700;
     color: #fff;
@@ -26,7 +26,7 @@
     letter-spacing: 1px;
 }
 
-.section-divider {
+.why .section-divider {
     width: 80px;
     height: 4px;
     background: linear-gradient(90deg, #37bcee, #2a8bf2);
@@ -34,14 +34,14 @@
     border-radius: 2px;
 }
 
-.why-choose__content {
+.why .why-choose__content {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
     margin-top: 3rem;
 }
 
-.why-choose__item {
+.why .why-choose__item {
     background: rgba(255, 255, 255, 0.05);
     border-radius: 16px;
     padding: 2.5rem 2rem;
@@ -51,20 +51,20 @@
     backdrop-filter: blur(5px);
 }
 
-.why-choose__item:hover {
+.why .why-choose__item:hover {
     transform: translateY(-5px);
     background: rgba(55, 188, 238, 0.1);
     box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
     border: 1px solid rgba(55, 188, 238, 0.2);
 }
 
-.why-choose__icon {
+.why .why-choose__icon {
     font-size: 3rem;
     margin-bottom: 1.5rem;
     color: #37bcee;
 }
 
-.why-choose__title {
+.why .why-choose__title {
     font-size: 1.5rem;
     font-weight: 600;
     color: #37bcee;
@@ -73,7 +73,7 @@
     letter-spacing: 0.5px;
 }
 
-.why-choose__description {
+.why .why-choose__description {
     font-size: 1.1rem;
     line-height: 1.6;
     color: #e5e7eb;
@@ -82,15 +82,15 @@
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    .section-title {
+    .why .section-title {
         font-size: 2rem;
     }
     
-    .why-choose__content {
+    .why .why-choose__content {
         grid-template-columns: 1fr;
     }
     
-    .why-choose {
+    .why .why-choose {
         padding: 4rem 0;
     }
 }

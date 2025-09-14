@@ -49,7 +49,7 @@ export default function AboutUs() {
                 <div className="section-header">
                     <h2 className="section-title">
                         <SplitText
-                            text="About 90 Nutrition"
+                            text="About Us"
                             className="title-text"
                             delay={300}
                             duration={0.9}

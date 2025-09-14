@@ -37,7 +37,7 @@ export default function ProductHome() {
 
   return (
     <>
-      <div className="OUR_INJECTABLES">
+      <div className="ProductHome OUR_INJECTABLES">
         <div className="borderOur">
           <h5>CHECK OUT!</h5>
           <ul>
@@ -114,11 +114,7 @@ export default function ProductHome() {
                       </Swiper>
                       <h2 className="mt-3">{item.pname || 'Product Name'}</h2>
                       <div className="product-details">
-                        <p><strong>Price:</strong> {item.price ? `£${item.price}` : 'Price not available'}</p>
-                        {item.protein && <p><strong>Protein:</strong> {item.protein}g</p>}
-                        {item.flavors && item.flavors[0] && (
-                          <p><strong>Flavors:</strong> {item.flavors.filter(Boolean).join(', ')}</p>
-                        )}
+                        <p><strong>Price:</strong> {item.price ? `$${item.price}` : 'Price not available'}</p>                      
                       </div>
                       <a
                         className="Link_Product"

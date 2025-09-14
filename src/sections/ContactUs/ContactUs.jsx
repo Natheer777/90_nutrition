@@ -3,7 +3,7 @@ import { Container, Row, Col, Form, Button, Alert } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPaperPlane, faCheckCircle } from '@fortawesome/free-solid-svg-icons';
 import './ContactUs.css';
-
+import ShinyText from '../../../components/ShinyText/ShinyText';
 const ContactUs = () => {
   const [isSubmitted, setIsSubmitted] = useState(false);
   
@@ -23,7 +23,13 @@ const ContactUs = () => {
     <section className="contact-section">
       <Container>
         <div className="section-title text-center mb-5 d-grid">
-          <h2>Get In Touch</h2>
+          <h2>
+          <ShinyText 
+            text="Get In Touch"
+            speed={3}
+            className='shiny-heading'
+            />
+          </h2>
           <p>Have questions or need assistance? Send us a message and we'll get back to you as soon as possible.</p>
         </div>
         

@@ -1,4 +1,4 @@
-import {Footer, Header_Product, Verfiy_product, Details_Product} from "../../sections";
+import {Footer, Header_Product, Verfiy_product, Details_Product, ProductSec} from "../../sections";
 import Logo from "../../assets/LOGO.svg";
 import { BackgroundVideo, DigitRain } from "../../../components";
 export default function Products() {
@@ -18,6 +18,7 @@ export default function Products() {
     <Details_Product />
     <DigitRain />
     <BackgroundVideo />
+    <ProductSec />
     <Verfiy_product />
     <Footer />
     </>
