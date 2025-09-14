@@ -37,7 +37,7 @@ export default function ProductHome() {
 
   return (
     <>
-      <div className="ProductHome OUR_INJECTABLES">
+      <div className="ProductHome OUR_INJECTABLES mb-4 mt-5">
         <div className="borderOur">
           <h5>CHECK OUT!</h5>
           <ul>
@@ -56,11 +56,30 @@ export default function ProductHome() {
               spaceBetween={20}
               slidesPerView={1}
               centeredSlides={false}
+              speed={800}
+              loop={true}
+              grabCursor={true}
               pagination={{
                 clickable: true,
+                dynamicBullets: true,
               }}
               navigation={true}
-              modules={[Pagination, Navigation]}
+              autoplay={{
+                delay: 3000,
+                disableOnInteraction: false,
+                waitForTransition: true,
+              }}
+              modules={[Autoplay, Pagination, Navigation]}
+              onSwiper={(swiper) => {
+                // Preload images for smoother transitions
+                swiper.on('beforeTransitionStart', () => {
+                  swiper.slides.eq(swiper.activeIndex).find('img').each(function() {
+                    if (this.complete) return;
+                    const img = new Image();
+                    img.src = this.src;
+                  });
+                });
+              }}
               breakpoints={{
                 480: {
                   slidesPerView: 1,
@@ -112,9 +131,9 @@ export default function ProductHome() {
                           )
                         ))}
                       </Swiper>
-                      <h2 className="mt-3">{item.pname || 'Product Name'}</h2>
+                      <h2 className="mt-3 text-center mb-0">{item.pname || 'Product Name'}</h2>
                       <div className="product-details">
-                        <p><strong>Price:</strong> {item.price ? `$${item.price}` : 'Price not available'}</p>                      
+                        <p className='text-center'><strong>Price:</strong> {item.price ? `$${item.price}` : 'Price not available'}</p>                      
                       </div>
                       <a
                         className="Link_Product"

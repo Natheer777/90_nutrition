@@ -1,6 +1,5 @@
 .ProductHome {
-    padding: 80px 0;
-    background: var(--color-black);
+    /* padding: 80px 0; */
     position: relative;
     overflow: hidden;
   }
@@ -44,6 +43,11 @@
     100% { transform: translateY(-200px); }
   }
   
+  @keyframes shine {
+    0% { background-position: 0% center; }
+    100% { background-position: 200% center; }
+  }
+  
   /* Header Section */
   .ProductHome .borderOur {
     text-align: center;
@@ -59,6 +63,7 @@
     color: var(--color-blue);
     margin-bottom: 15px;
     text-transform: uppercase;
+    font-weight: 600;
     position: relative;
     display: inline-block;
   }
@@ -100,14 +105,17 @@
     font-family: 'Bebas Neue', sans-serif;
     font-size: 56px;
     font-weight: normal;
-    background: var(--gradient-primary);
+    background: linear-gradient(120deg, #37bcee, white, #37bcee);
+    background-size: 200% auto;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
     text-transform: uppercase;
     letter-spacing: 3px;
-    text-shadow: 0 0 30px rgba(55, 188, 238, 0.5);
+    text-shadow: 0 0 15px rgba(55, 188, 238, 0.3);
     position: relative;
+    display: inline-block;
+    animation: shine 3s linear infinite;
   }
   
   .ProductHome .shiny-heading::after {
