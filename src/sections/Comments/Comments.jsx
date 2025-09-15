@@ -60,7 +60,7 @@ export default function Comments() {
             {
               id: 3,
               img: "https://randomuser.me/api/portraits/men/30.jpg",
-              comment: "The weight gainer from 90-Nutrition helped me achieve my bulking goals with clean, quality nutrition. The best UK supplement brand I've tried!",
+              comment: "The whey protein supplements from 90-Nutrition helped me achieve my fitness goals with clean, quality nutrition. The best UK supplement brand I've tried!",
               name: "David Miller",
             }
             

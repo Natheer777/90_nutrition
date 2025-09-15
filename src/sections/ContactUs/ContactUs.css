@@ -2,7 +2,6 @@
 /* Contact Section */
 .contact-section {
   padding: 100px 0;
-  background: var(--color-black);
   position: relative;
   overflow: hidden;
   color: var(--color-white);
@@ -261,16 +260,18 @@ textarea.form-control {
   margin-bottom: 20px;
   animation: bounceIn 0.8s ease-out;
 }
-
+.contact-form ::placeholder{
+  color: var(--color-blue);
+}
 .success-message h4 {
   font-size: 1.8rem;
-  color: #1a1a2e;
+  color: white;
   margin-bottom: 15px;
   font-weight: 700;
 }
 
 .success-message p {
-  color: #6c757d;
+  color: white;
   font-size: 1.1rem;
   margin: 0;
   line-height: 1.6;

@@ -227,6 +227,9 @@
     width: 100%;
     transform: none !important;
     flex-wrap: wrap;
+    gap: 40px;
+    margin: auto;
+    justify-content: center;
   }
 .ProductHome a {
   text-decoration: none;

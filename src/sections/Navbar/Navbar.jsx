@@ -7,9 +7,9 @@ export default function Navbar() {
       <div>
         <nav className="navbar navbar-expand-lg">
           <div className="container container-fluid">
-            <a className="navbar-brand hidden" href="#">
+            <Link className="navbar-brand hidden" to="/">
               <img src={Logo} alt="" />
-            </a>
+            </Link>
             <button
               className="navbar-toggler"
               type="button"

@@ -5,7 +5,7 @@ export default function Home() {
     <>
     <Navbar />
     <BackgroundVideo />
-    {/* <Header /> */}
+    <Header />
     <AboutUs />
     <ProductHome />
     <NewArrivals />

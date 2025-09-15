@@ -7,12 +7,12 @@ import { Contact, Home, Products, Product } from "./pages/index";
 import WhatsAppButton from "./components/WhatsAppButton/WhatsAppButton";
 
 // Import Font Awesome
-import { library } from '@fortawesome/fontawesome-svg-core';
-import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+// import { library } from '@fortawesome/fontawesome-svg-core';
+// import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 // Add icons to the library
-library.add(faWhatsapp);
+// library.add(faWhatsapp);
  
 function App() {
     useEffect(() => {
@@ -44,7 +44,7 @@ function App() {
           <Route path="/:productName" element={<Products />} />
           <Route path="/Contact" element={<Contact />} />
         </Routes>
-        <WhatsAppButton />
+        {/* <WhatsAppButton /> */}
       </Router>
     </>
   );
